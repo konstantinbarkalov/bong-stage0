@@ -1,0 +1,64 @@
+.product-complectation {
+    padding: 32px;
+    color: #444;
+    overflow: hidden;
+    position: relative;
+}
+.product-complectation__backgrounds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+ }
+.product-complectation__background-layer.product-complectation__background-layer--tile {
+    background: linear-gradient(#ffebdd60, #ffebdd00), url(./craft-cardboard-tile.jpg);
+    background-size: 540px 360px;
+    background-position-y: top, bottom;
+    background-repeat: repeat-x, repeat;
+}
+.product-complectation__background-layer.product-complectation__background-layer--tile-end-deep {
+    background: url(./craft-cardboard-tile-end-deep.jpg);
+    background-size: 540px 360px;
+    background-position-y: bottom;
+    background-repeat: repeat-x;
+}
+.product-complectation__background-layer.product-complectation__background-layer--gradient {
+    background: linear-gradient(#edd8c880, #edd8c840, #edd8c800);
+    background-size: 100% 720px;
+    background-position-y: top;
+    background-repeat: repeat-x;
+}
+.product-complectation__content {
+    position: relative;
+}
+.product-complectation__col,
+.product-complectation__row {
+    padding: 16px 0;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+.product-complectation__row {
+    flex-direction: row;
+}
+.product-complectation__col {
+    flex-direction: column;
+}
+
+.product-complectation__title {
+    padding: 16px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* phasing */
+.product-complectation.--dephased .product-complectation__background-layer.product-complectation__background-layer--gradient {
+    background-position-y: -1000px;
+    
+}
+.product-complectation .product-complectation__background-layer.product-complectation__background-layer--gradient {
+    background-position-y: 0;
+    background-repeat: repeat-x;
+    transition: background-position-y 5s;
+}

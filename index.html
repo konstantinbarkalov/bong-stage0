@@ -1,0 +1,300 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./base.css">
+  <link rel="stylesheet" href="./theatre.css">
+  <link rel="stylesheet" href="./product-card.css">
+  <link rel="stylesheet" href="./product-complectation.css">
+  <link rel="stylesheet" href="./product-azaza.css">
+  </link>
+</head>
+
+<body>
+  <div class="theatre-outer-container">
+    <div class="theatre-inner-container" onmousedown="onMouseDown(event)" onmouseup="onMouseUp(event)"
+      onmousemove="onMouseMove(event)">
+      <div class="theatre-inner-container__layer">
+        <img src="still1080.png" width="100%" height="100%"></img>
+      </div>
+      <div class="theatre-inner-container__layer theatre-inner-container__layer">
+        <video id="video" width="100%" height="100%" loop>
+          <source src="video1080.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="theatre-inner-container__layer">
+        <div class="showcase-header">
+          <div class="breadcumbs">
+            Bongs<span class="breadcumbs__dash"> ＞ </span>Medium sized
+          </div>
+          <h1>Reference bong</h1>
+          <div class="collection-title">Phuket island mist collection</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="product-card">
+    <div class="product-card__title">
+      <h6>Phuket island mist collection</h6>
+      <h1>Reference bong</h1>
+      <p>Perfectly simple. Nice bong to start with. Has no icepeaks, so it's much easier to clean.</p>
+    </div>
+    <h6>color</h6>
+    <div class="product-card__col">
+      <div class="product-card__variants">
+        <div class="product-color-variant">
+          <div class="product-color-variant__dot" style="--albedo: black"></div>
+          <div class="product-color-variant__name">
+            black label
+          </div>
+        </div>
+        <div class="product-color-variant product-color-variant--selected">
+          <div class="product-color-variant__dot" style="--albedo: white"></div>
+          <div class="product-color-variant__name">
+            white label
+          </div>
+        </div>
+        <div class="product-color-variant">
+          <div class="product-color-variant__dot" style="--albedo: orangered"></div>
+          <div class="product-color-variant__name">
+            sunset label
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="product-card__row">
+      <div class="product-card__price">
+        <div class="price-tag">
+          <div class="price-tag__content">850<span class="currency-suffix"> THB</span></div>
+          <div class="price-tag__dot"></div>
+        </div>
+      </div>
+    </div>
+    <div class="product-card__row product-card__row--primary-button-block">
+      <button class="product-card__action-button product-card__action-button--buy" onclick="start()">Buy</button>
+      <button class="product-card__action-button" onclick="doStuff2()">Add to cart</button>
+    </div>
+
+    <h2>Stats</h2>
+    <div class="product-card__row product-card__row--details">
+      <div class="product-card-detail">
+        <div class="product-card-detail__name">type</div>
+        <div class="product-card-detail__value">medium bong</div>
+      </div>
+      <div class="product-card-detail">
+        <div class="product-card-detail__name">shape</div>
+        <div class="product-card-detail__value">cone</div>
+      </div>
+      <div class="product-card-detail">
+        <div class="product-card-detail__name">height</div>
+        <div class="product-card-detail__value">28 cm</div>
+      </div>
+      <div class="product-card-detail">
+        <div class="product-card-detail__name">diameter</div>
+        <div class="product-card-detail__value">10 cm</div>
+      </div>
+      <div class="product-card-detail">
+        <div class="product-card-detail__name">volume</div>
+        <div class="product-card-detail__value">1.8 l</div>
+      </div>
+      <div class="product-card-detail">
+        <div class="product-card-detail__name">material</div>
+        <div class="product-card-detail__value">tinted tempered glass</div>
+      </div>
+      <div class="product-card-detail">
+        <div class="product-card-detail__name">weight</div>
+        <div class="product-card-detail__value">650 g</div>
+      </div>
+      <div class="product-card-detail">
+        <div class="product-card-detail__name">collection</div>
+        <div class="product-card-detail__value">Phuket island mist 2023</div>
+      </div>
+      <div class="product-card-detail">
+        <div class="product-card-detail__name">icepeaks</div>
+        <div class="product-card-detail__value">no</div>
+      </div>
+      <div class="product-card-detail">
+        <div class="product-card-detail__name">percolator</div>
+        <div class="product-card-detail__value">no</div>
+      </div>
+      <div class="product-card-detail">
+        <div class="product-card-detail__name">weedloth</div>
+        <div class="product-card-detail__value">1/2"</div>
+      </div>
+      <div class="product-card-detail">
+        <div class="product-card-detail__name">inner tube</div>
+        <div class="product-card-detail__value">separate, 1/2"</div>
+      </div>
+    </div>
+    <h2>Stars</h2>
+    <div class="product-card__row product-card__row--details product-card__row--stars-section">
+      <div class="product-card-detail">
+        <div class="product-card-detail__rating-name">fit for parties</div>
+        <div class="product-card-detail__rating">
+          <span class="rating-star rating-star--on">⭐</span>
+          <span class="rating-star rating-star--on">⭐</span>
+          <span class="rating-star rating-star--on">⭐</span>
+          <span class="rating-star rating-star--off">⭐</span>
+          <span class="rating-star rating-star--off">⭐</span>
+        </div>
+      </div>
+      <div class="product-card-detail">
+        <div class="product-card-detail__rating-name">easy to clean</div>
+        <div class="product-card-detail__rating">
+          <span class="rating-star rating-star--on">⭐</span>
+          <span class="rating-star rating-star--on">⭐</span>
+          <span class="rating-star rating-star--on">⭐</span>
+          <span class="rating-star rating-star--off">⭐</span>
+          <span class="rating-star rating-star--off">⭐</span>
+        </div>
+      </div>
+      <div class="product-card-detail">
+        <div class="product-card-detail__rating-name">personal use</div>
+        <div class="product-card-detail__rating">
+          <span class="rating-star rating-star--on">⭐</span>
+          <span class="rating-star rating-star--on">⭐</span>
+          <span class="rating-star rating-star--on">⭐</span>
+          <span class="rating-star rating-star--off">⭐</span>
+          <span class="rating-star rating-star--off">⭐</span>
+        </div>
+      </div>
+      <div class="product-card-detail">
+        <div class="product-card-detail__rating-name">look at the shelf</div>
+        <div class="product-card-detail__rating">
+          <span class="rating-star rating-star--on">⭐</span>
+          <span class="rating-star rating-star--on">⭐</span>
+          <span class="rating-star rating-star--on">⭐</span>
+          <span class="rating-star rating-star--off">⭐</span>
+          <span class="rating-star rating-star--off">⭐</span>
+        </div>
+      </div>
+      <div class="product-card-detail">
+        <div class="product-card-detail__rating-name">good as a gift</div>
+        <div class="product-card-detail__rating">
+          <span class="rating-star rating-star--on">⭐</span>
+          <span class="rating-star rating-star--on">⭐</span>
+          <span class="rating-star rating-star--on">⭐</span>
+          <span class="rating-star rating-star--off">⭐</span>
+          <span class="rating-star rating-star--off">⭐</span>
+        </div>
+      </div>
+      <div class="product-card-detail">
+        <div class="product-card-detail__rating-name">replaceable spare parts</div>
+        <div class="product-card-detail__rating">
+          <span class="rating-star rating-star--on">⭐</span>
+          <span class="rating-star rating-star--on">⭐</span>
+          <span class="rating-star rating-star--on">⭐</span>
+          <span class="rating-star rating-star--on">⭐</span>
+          <span class="rating-star rating-star--off">⭐</span>
+        </div>
+      </div>
+      <div class="product-card-detail">
+        <div class="product-card-detail__rating-name">tweaks</div>
+        <div class="product-card-detail__rating">
+          <span class="rating-star rating-star--on">⭐</span>
+          <span class="rating-star rating-star--on">⭐</span>
+          <span class="rating-star rating-star--on">⭐</span>
+          <span class="rating-star rating-star--on">⭐</span>
+          <span class="rating-star rating-star--on">⭐</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="product-complectation">
+    <div class="product-complectation__backgrounds">
+      <div class="layers">
+        <div class="layers__layer product-complectation__background-layer product-complectation__background-layer--tile">
+        </div>
+        <div class="layers__layer product-complectation__background-layer product-complectation__background-layer--tile-end-deep">
+        </div>
+        <div class="layers__layer product-complectation__background-layer product-complectation__background-layer--gradient">
+        </div>
+      </div>
+    </div>
+    <div class="product-complectation__content">
+      <div class="product-complectation__title">
+        <h2>What's inside the box</h2>
+      </div>
+      <div class="product-complectation__schema_container">
+        <div class="product-schema">
+          <img class="product-schema__layer product-schema__layer--main" src="./contour-main.svg" />
+          <img class="product-schema__layer product-schema__layer--labels" src="./contour-labels.svg" />
+        </div>
+      </div>
+      <div class="product-complectation__row product-complectation__row--list-section">
+        <ul>
+          <li class="complectation-item">
+            <div class="complectation-item__name">box itself</div>
+            <div class="complectation-item__stats">80 cm x 24 cm x 24 cm crafting cartboard</div>
+            <div class="complectation-item__amount">1 piece</div>
+          </li>
+          <li class="complectation-item">
+            <div class="complectation-item__name">bong</div>
+            <div class="complectation-item__stats">36 cm x 16 cm tempered glass</div>
+            <div class="complectation-item__amount">1 piece</div>
+          </li>
+          <li class="complectation-item">
+            <div class="complectation-item__name">inner tube</div>
+            <div class="complectation-item__stats">10 cm x 1/2" glass</div>
+            <div class="complectation-item__amount">1 piece</div>
+          </li>
+          <li class="complectation-item">
+            <div class="complectation-item__name">weedloth</div>
+            <div class="complectation-item__stats">1/2" glass</div>
+            <div class="complectation-item__amount">1 piece</div>
+          </li>
+          <li class="complectation-item">
+            <div class="complectation-item__name">guidebook</div>
+            <div class="complectation-item__stats">nice guide to the galaxy</div>
+            <div class="complectation-item__amount">32 sheets</div>
+          </li>
+          <li class="complectation-item">
+            <div class="complectation-item__name">cleaning fluid</div>
+            <div class="complectation-item__stats">120 oz raw chemicide</div>
+            <div class="complectation-item__amount">1 piece</div>
+          </li>
+          <li class="complectation-item">
+            <div class="complectation-item__name">bubbled wrapping foam</div>
+            <div class="complectation-item__stats">good old antistress</div>
+            <div class="complectation-item__amount">alot</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="product-azaza">
+    <div class="product-azaza__title">
+      <h2>More photos and media</h2>
+    </div>
+    <div class="product-azaza__row">
+      <div class="image-frame">q</div>
+      <div class="image-frame">q</div>
+      <div class="image-frame">q</div>
+      <div class="image-frame">q</div>
+      <div class="image-frame">q</div>
+      <div class="image-frame">q</div>
+      <div class="image-frame">q</div>
+      <div class="image-frame">q</div>
+    </div>
+  </div>
+  <div class="product-ururu">
+    <div class="product-ururu__title">
+      <h2>Other Products</h2>
+    </div>
+    <div class="product-ururu__row">
+      ururu
+    </div>
+    <div class="product-ururu__row">
+      ururu
+    </div>
+  </div>
+  <script src="theatre.js"></script>
+  <script src="productCard.js"></script>
+  <script src="productComplectation.js"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+.product-card {
+    padding: 32px;
+    background: linear-gradient(180deg, #1b1b1b, transparent);
+    background-color: #221f2e;
+}
+
+.product-card__price {
+    font-size: 24px;
+}
+.product-card__col,
+.product-card__row {
+    padding: 16px 0;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+.product-card__row {
+    flex-direction: row;
+}
+
+.product-card__col {
+    flex-direction: column;
+}
+
+.product-card__title {
+    padding: 16px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card__action-button {
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgb(222, 222, 222);
+    color: #222;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 4px 3px -2px #000;
+}
+.product-card__action-button.product-card__action-button--buy {
+    /* background-color: #d46800;
+    color: #fff;
+    box-shadow: 0px 0px 24px 2px #d4680080, 0px 4px 3px -2px #000; */
+    /* background-color: #3681d2;
+    color: #fff;
+    box-shadow: 0px 0px 24px 2px #2788ff66, 0px 4px 3px -2px #000;     */
+    background: linear-gradient( #a94c0000, #a94c00);
+    background-color: #d26b08;
+    color: #fff;
+    box-shadow: 0px 0px 24px 2px #ff592766, 0px 4px 3px -2px #000;
+    text-shadow: 0 1px 3px #00000060, 0 1px 1px #00000040;
+
+}
+
+
+/* phasing */
+
+.product-card__row.product-card__row--primary-button-block.--dephased .product-card__action-button.product-card__action-button--buy {
+    background-color: #a94c00;
+    box-shadow: 0px 0px 24px 2px transparent, 0px 4px 3px -2px transparent;
+}
+
+.product-card__row.product-card__row--primary-button-block .product-card__action-button.product-card__action-button--buy {
+    background-color: #d26b08;
+    box-shadow: 0px 0px 24px 2px #ff592780, 0px 4px 3px -2px #000;
+    transition: box-shadow 3s, background-color 2s;
+}
+
+
+
+
+
+.product-card__row.product-card__row--details {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+.product-card-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.product-card-detail__name,
+.product-card-detail__value,
+.product-card-detail__rating-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card-detail__name {
+    font-size: 12px;
+    color: #888;
+}
+.product-card-detail__value {
+    font-size: 16px;
+    color: #fff;
+}
+.product-card-detail__rating-name {
+    font-size: 12px;
+    color: #fff;
+}
+
+
+.product-card__variants {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    flex-wrap: wrap;;
+}
+

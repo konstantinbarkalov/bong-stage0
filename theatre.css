@@ -1,0 +1,61 @@
+
+.theatre-inner-container {
+    width: min(100vw, 100vh * 2/3);
+    height: min(100vw * 3/2, 100vh);
+    position: relative;
+}
+
+.theatre-outer-container {
+    width: 100%;
+    height: min(100vw * 3/2, 100vh);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.theatre-inner-container__layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.theatre-inner-container__layer.theatre-inner-container__layer--active {
+    /* width: round(nearest, calc(100% * 800 / 1080), 1px);
+    height: round(nearest, calc(100% * 1200 / 1620), 1px);
+    bottom: 0;
+    left: round(nearest, calc(100% * (1080 - 800) / 1080 / 2), 1px); */
+    width: calc(100% * 800 / 1080);
+    height: calc(100% * 1200 / 1620);
+    bottom: 0;
+    left: calc(100% * (1080 - 800) / 1080 / 2);
+
+}
+
+/* .showcase-header  */
+.showcase-header {
+    padding: 32px;
+}
+
+/* .showcase-header phasing */
+.showcase-header.--dephased h1 {
+    opacity: 0.5;
+}
+.showcase-header.--dephased .collection-title {
+    opacity: 0;
+    transform: translateY(5px);
+}
+
+
+.showcase-header h1 {
+    transition: opacity 5s;
+    opacity: 1;
+}
+
+
+.showcase-header .collection-title {
+    transition: opacity 5s, transform 1s;
+    transition-delay: 0.33s, 0.33s;
+    opacity: 1;
+    transform: translateY(0px);
+}

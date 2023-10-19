@@ -1,0 +1,238 @@
+html,
+body {
+    background-color: black;
+    margin: 0;
+    color: #ccc;
+    font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+h1 {
+    font-weight: 100;
+    font-size: 42px;
+}
+
+h2 {
+    font-weight: 300;
+    font-size: 32px;
+}
+
+h3 {
+    font-weight: 300;
+    font-size: 24px;
+}
+
+/* .layers */
+.layers,
+.layers .layers__layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.breadcumbs {
+    font-size: 14px;
+}
+
+.collection-title {
+    font-size: 10px;
+}
+
+.breadcumbs__dash {
+    color: #ffffff47;
+}
+ 
+.price-tag {
+    border: 1px solid #ffffff20;
+    border-radius: 8px 32px 32px 8px;
+    padding: 12px;
+    font-size: 24px;
+    line-height: 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    box-shadow: 0 0 32px 0 #ffffff1f;
+}
+
+.price-tag__dot {
+    display: flex;
+    flex-grow: 0;
+    border: 1px solid #ffffff20;
+    width: 8px;
+    height: 8px;
+    border-radius: 64px;
+    margin: 6px;
+    box-shadow: inset 0 0 32px 0 #ffffff1f;
+}
+
+.currency-suffix {
+    opacity: 0.2;
+}
+
+
+.product-color-variant {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+}
+
+.product-color-variant__dot {
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    box-shadow: 0 0 25px 0 color-mix(in srgb, color-mix(in srgb, var(--albedo) 70%, #666 30%) 70%, #000 30%);
+    background-color: var(--albedo);
+}
+
+.product-color-variant__name {
+    color: #777;
+    text-decoration: underline;
+    text-decoration-color: #444;
+}
+
+.product-color-variant.product-color-variant--selected .product-color-variant__name {
+    color: #ccc;
+    text-decoration: none;
+}
+
+/* .rating-star  */
+
+.rating-star {
+    display: inline-block;
+}
+.rating-star.rating-star--on {
+    color: transparent;
+    text-shadow: 0 0 0 rgb(255, 255, 255);
+}
+
+.rating-star.rating-star--off {
+    color: transparent;
+    text-shadow: 0 0 0 rgb(64, 64, 64);
+}
+
+/* .rating-star phasing */
+
+.rating-star.--dephased {
+    transform:  scale(0.75);
+    opacity: 0.25;
+}
+
+.rating-star {
+    transition: transform 2s, opacity 1s;
+    transform: scale(1);
+    opacity: 1;
+}
+
+
+/* .complectation-item */
+
+.complectation-item {
+    margin-bottom: 12px;
+}
+
+.complectation-item__name {
+    font-size: 18px;
+}
+
+.complectation-item__stats {
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 3px;
+}
+
+.complectation-item__amount {
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+/* .complectation-item phasing */
+
+.complectation-item.--dephased {
+    transform: translateX(-10px);
+    opacity: 0;
+}
+
+.complectation-item.--dephased .complectation-item__amount {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+.complectation-item {
+    transform: translateX(0px);
+    opacity: 1;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.complectation-item .complectation-item__amount {
+    transition: transform 0.5s, opacity 0.5s;
+    transition-delay: 0.75s;
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+
+
+
+
+.product-ururu {
+    padding: 32px;
+    background: #130e14;
+    color: #ccc;
+}
+
+.image-frame {
+    box-shadow: 0 2px 2px -1px black;
+    border: 4px solid #ccc;
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+}
+
+/* .product-schema */
+
+.product-schema {
+    position: relative;
+    width: 100%;
+    max-height: 75vh;
+    aspect-ratio: 1;
+}
+
+.product-schema .product-schema__layer {
+position: absolute;
+width: 100%;
+height: 100%;
+}
+
+/* .product-schema phasing */
+
+.product-schema.--dephased .product-schema__layer.product-schema__layer--main {
+    transform: scale(0.95);
+    opacity: 0.75;
+}
+.product-schema.--dephased .product-schema__layer.product-schema__layer--labels {
+    transform: scale(1.05);
+    opacity: 0;
+}
+
+.product-schema .product-schema__layer.product-schema__layer--main {
+    transition: transform 2s, opacity 2s;
+    transition-delay: 0s, 1s;
+    transform: scale(1);
+    opacity: 1;
+}
+.product-schema .product-schema__layer.product-schema__layer--labels {
+    transition: transform 2s, opacity 2s;
+    transition-delay: 0.5s, 0.5s;
+    transform: scale(1);
+    opacity: 1;
+}
