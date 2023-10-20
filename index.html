@@ -3,24 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./base.css">
-  <link rel="stylesheet" href="./theatre.css">
-  <link rel="stylesheet" href="./product-card.css">
-  <link rel="stylesheet" href="./product-complectation.css">
-  <link rel="stylesheet" href="./product-azaza.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/theatre.css">
+  <link rel="stylesheet" href="./css/product-card.css">
+  <link rel="stylesheet" href="./css/product-complectation.css">
+  <link rel="stylesheet" href="./css/product-lightroom.css">
   </link>
 </head>
 
 <body>
   <div class="theatre-outer-container">
-    <div class="theatre-inner-container" onmousedown="onMouseDown(event)" onmouseup="onMouseUp(event)"
-      onmousemove="onMouseMove(event)">
+    <div class="theatre-inner-container" onmousedown="app.onMouseDown(event)" onmouseup="app.onMouseUp(event)"
+      onmousemove="app.onMouseMove(event)">
       <div class="theatre-inner-container__layer">
-        <img src="still1080.png" width="100%" height="100%"></img>
+        <img src="./media/still1080.png" width="100%" height="100%"></img>
       </div>
       <div class="theatre-inner-container__layer theatre-inner-container__layer">
         <video id="video" width="100%" height="100%" loop>
-          <source src="video1080.mp4" type="video/mp4">
+          <source src="./media/video1080.mp4" type="video/mp4">
         </video>
       </div>
       <div class="theatre-inner-container__layer">
@@ -72,7 +72,7 @@
       </div>
     </div>
     <div class="product-card__row product-card__row--primary-button-block">
-      <button class="product-card__action-button product-card__action-button--buy" onclick="start()">Buy</button>
+      <button class="product-card__action-button product-card__action-button--buy" onclick="app.start()">Buy</button>
       <button class="product-card__action-button" onclick="doStuff2()">Add to cart</button>
     </div>
 
@@ -209,6 +209,8 @@
         </div>
         <div class="layers__layer product-complectation__background-layer product-complectation__background-layer--tile-end-deep">
         </div>
+        <div class="layers__layer product-complectation__background-layer product-complectation__background-layer--tile-end-deeper">
+        </div>
         <div class="layers__layer product-complectation__background-layer product-complectation__background-layer--gradient">
         </div>
       </div>
@@ -219,8 +221,8 @@
       </div>
       <div class="product-complectation__schema_container">
         <div class="product-schema">
-          <img class="product-schema__layer product-schema__layer--main" src="./contour-main.svg" />
-          <img class="product-schema__layer product-schema__layer--labels" src="./contour-labels.svg" />
+          <img class="product-schema__layer product-schema__layer--main" src="./media/contour-main.svg" />
+          <img class="product-schema__layer product-schema__layer--labels" src="./media/contour-labels.svg" />
         </div>
       </div>
       <div class="product-complectation__row product-complectation__row--list-section">
@@ -264,11 +266,11 @@
       </div>
     </div>
   </div>
-  <div class="product-azaza">
-    <div class="product-azaza__title">
+  <div class="product-lightroom">
+    <div class="product-lightroom__title">
       <h2>More photos and media</h2>
     </div>
-    <div class="product-azaza__row">
+    <div class="product-lightroom__row product-lightroom__row--list-section">
       <div class="image-frame">q</div>
       <div class="image-frame">q</div>
       <div class="image-frame">q</div>
@@ -289,11 +291,67 @@
     <div class="product-ururu__row">
       ururu
     </div>
+    <div class="product-ururu__row">
+      ururu
+    </div>
+    <div class="product-ururu__row">
+      ururu
+    </div>
+    <div class="product-ururu__row">
+      ururu
+    </div>
+    <div class="product-ururu__row">
+      ururu
+    </div>
+    <div class="product-ururu__row">
+      ururu
+    </div>
+    <div class="product-ururu__row">
+      ururu
+    </div>
+    <div class="product-ururu__row">
+      ururu
+    </div>
+    <div class="product-ururu__row">
+      ururu
+    </div>
+    <div class="product-ururu__row">
+      ururu
+    </div>
+    <div class="product-ururu__row">
+      ururu
+    </div>
+    <div class="product-ururu__row">
+      ururu
+    </div>
+    <div class="product-ururu__row">
+      ururu
+    </div>
+    <div class="product-ururu__row">
+      ururu
+    </div>
+    <div class="product-ururu__row">
+      ururu
+    </div>
+    <div class="product-ururu__row">
+      ururu
+    </div>
+    <div class="product-ururu__row">
+      ururu
+    </div>
+    <div class="product-ururu__row">
+      ururu
+    </div>
+    <div class="product-ururu__row">
+      ururu
+    </div>
   </div>
-  <script src="theatre.js"></script>
-  <script src="productCard.js"></script>
-  <script src="productComplectation.js"></script>
-  <script src="script.js"></script>
+  <script src="./js/theatre.js"></script>
+  <script src="./js/productCard.js"></script>
+  <script src="./js/productComplectation.js"></script>
+  <script src="./js/productLightroom.js"></script>
+  <script src="./js/app.js"></script>
+  <script src="./js/start.js"></script>
 
 </body>
 

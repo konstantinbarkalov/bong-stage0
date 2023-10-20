@@ -3,6 +3,8 @@
     color: #444;
     overflow: hidden;
     position: relative;
+    -webkit-mask-image: url(../media/mask.png);
+    mask-type: alpha;
 }
 .product-complectation__backgrounds {
     position: absolute;
@@ -12,14 +14,21 @@
     height: 100%;
  }
 .product-complectation__background-layer.product-complectation__background-layer--tile {
-    background: linear-gradient(#ffebdd60, #ffebdd00), url(./craft-cardboard-tile.jpg);
+    background: linear-gradient(#ffebdd60, #ffebdd00), url(../media/craft-cardboard-tile.jpg);
     background-size: 540px 360px;
     background-position-y: top, bottom;
     background-repeat: repeat-x, repeat;
 }
 .product-complectation__background-layer.product-complectation__background-layer--tile-end-deep {
-    background: url(./craft-cardboard-tile-end-deep.jpg);
+    background: url(../media/craft-cardboard-tile-end-deep.jpg);
     background-size: 540px 360px;
+    background-position-y: bottom;
+    background-repeat: repeat-x;
+    transition: opacity 2s;
+}
+.product-complectation__background-layer.product-complectation__background-layer--tile-end-deeper {
+    background: url(../media/craft-cardboard-tile-end-deeper.jpg);
+    background-size: 540px 180px;
     background-position-y: bottom;
     background-repeat: repeat-x;
 }

@@ -4,6 +4,7 @@ class ProductComplectation {
         this.$listItems = this.$root.querySelectorAll('.complectation-item');
         this.$listSection = this.$root.querySelector('.product-complectation__row--list-section');
         this.$endDeepLayer = this.$root.querySelector('.product-complectation__background-layer--tile-end-deep'); 
+        this.$endDeeperLayer = this.$root.querySelector('.product-complectation__background-layer--tile-end-deeper'); 
         this.$schemaRoot = this.$root.querySelector('.product-schema'); // TODO better tag 
         
         let options = {
@@ -66,15 +67,19 @@ class ProductComplectation {
     }
 
     scrollCallback(ev) {
-        const boundingClientRect = this.$endDeepLayer.getBoundingClientRect();
+        const boundingClientRect = this.$root.getBoundingClientRect();
         const diffRatio = (360 - boundingClientRect.bottom + 45) / 360;
         const clampedLinearRatio = Math.max(0, Math.min(1, diffRatio));
-        const opacity = Math.pow(clampedLinearRatio, 3);
-        this.changeEndDeepOpacity(opacity);
+        const deepOpacity = Math.pow(clampedLinearRatio, 2);
+        const deeperOpacity = Math.pow(clampedLinearRatio, 4);
+        
+        this.changeEndDeepOpacity(deepOpacity, deeperOpacity);
     }
 
-    changeEndDeepOpacity(opacity) {
-        this.$endDeepLayer.style = `opacity: ${opacity};`;
+    changeEndDeepOpacity(deepOpacity, deeperOpacity) {
+        this.$endDeepLayer.style = `opacity: ${deepOpacity};`;
+        this.$endDeeperLayer.style = `opacity: ${deeperOpacity};`;
+    
     }
 
 
