@@ -3,8 +3,6 @@
     color: #444;
     overflow: hidden;
     position: relative;
-    -webkit-mask-image: url(../media/mask.png);
-    mask-type: alpha;
 }
 .product-complectation__backgrounds {
     position: absolute;

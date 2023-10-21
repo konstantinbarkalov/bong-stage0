@@ -1,0 +1,58 @@
+.product-lightroom {
+    padding: 32px;
+    color: #777;
+    position: relative;
+}
+.product-lightroom__backgrounds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+ }
+.product-lightroom__background-layer.product-lightroom__background-layer--one {
+    background: radial-gradient(closest-side, #555, transparent);
+    background-size: 200% 200px;
+    background-color: #333;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 0;
+}
+.product-lightroom__background-layer.product-lightroom__background-layer--two {
+    background: radial-gradient(closest-side, #555, transparent);
+    background-size: 200% 400px;
+    background-color: #333;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 0;
+    -webkit-mask-image: url(../media/mask.png);
+    mask-type: alpha;
+    -webkit-mask-size: 256px 256px;
+}    
+.product-lightroom__background-layer.product-lightroom__background-layer--three {
+    box-shadow: inset 0 0 16px -6px black;
+}
+.product-lightroom__content {
+    position: relative;
+}
+
+.product-lightroom__col,
+.product-lightroom__row {
+    padding: 16px 0;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+.product-lightroom__row {
+    flex-direction: row;
+}
+
+.product-lightroom__col {
+    flex-direction: column;
+}
+
+.product-lightroom__title {
+    padding: 16px 0;
+    display: flex;
+    flex-direction: column;
+}

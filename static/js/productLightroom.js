@@ -3,7 +3,10 @@ class ProductLightroom {
         this.$root = $root;
         this.$listItems = this.$root.querySelectorAll('.image-frame');
         this.$listSection = this.$root.querySelector('.product-lightroom__row--list-section');
+        this.$oneLayer = this.$root.querySelector('.product-lightroom__background-layer--one'); 
+        this.$twoLayer = this.$root.querySelector('.product-lightroom__background-layer--two'); 
 
+        
         
         let options = {
             threshold: 0.0,
@@ -50,7 +53,9 @@ class ProductLightroom {
         this.$listItems.forEach((item, itemIdx) => {
             item.style = `box-shadow: 0 ${-parallaxDiff}px 16px -6px black;`;
         });
-        this.$root.style = `background-position-y: ${-parallaxDiff * 10}px;`;
+        this.$oneLayer.style = `background-position-y: ${-parallaxDiff * 60}px`;
+        this.$twoLayer.style = `background-position-y: ${-parallaxDiff * 40}px; -webkit-mask-position-y: ${-parallaxDiff * 0}px;`;
+
     }
 
 
