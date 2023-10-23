@@ -31,10 +31,12 @@
     background-repeat: repeat-x;
 }
 .product-complectation__background-layer.product-complectation__background-layer--gradient {
-    background: linear-gradient(#edd8c880, #edd8c840, #edd8c800);
-    background-size: 100% 720px;
+    background: linear-gradient(#fff6ed00, #fff6ed00, #fff6ed80, #fff6eda0, #fff6ed80, #fff6ed00), linear-gradient(#edd8c880, #edd8c840, #edd8c800);
+    
+    background-size: 100% 100%, 100% 720px;
     background-position-y: top;
     background-repeat: repeat-x;
+    background-attachment: fixed, local;
 }
 .product-complectation__content {
     position: relative;
@@ -61,11 +63,10 @@
 
 /* phasing */
 .product-complectation.--dephased .product-complectation__background-layer.product-complectation__background-layer--gradient {
-    background-position-y: -1000px;
+    background-position-y: top, -1000px;
     
 }
 .product-complectation .product-complectation__background-layer.product-complectation__background-layer--gradient {
-    background-position-y: 0;
-    background-repeat: repeat-x;
+    background-position-y: top, 0;
     transition: background-position-y 5s;
 }

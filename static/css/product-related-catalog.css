@@ -53,7 +53,7 @@
         opacity: 1;
     }
     50% {
-        opacity: 0;
+        opacity: 0.75;
     }
     to {
         opacity: 1;
@@ -65,7 +65,7 @@
         opacity: 0;
     }
     to {
-        opacity: 1;
+        opacity: 0.25;
     }
 }
 
@@ -73,36 +73,17 @@
 @keyframes text-neon-switch-fade-to-normal {
     from {
         color: #cccccc;
-        text-shadow: 0 0 18px;
+        text-shadow: 0 0 36px #fff, 0 0 12px #fff;
     }
     to {
         color: #cccccc;
-        text-shadow: 0 0 18px transparent;
+        text-shadow: 0 0 0px transparent, 0 0 0px transparent;
     }
 
 }
 
-@keyframes text-neon-switch-on {
+@keyframes text-neon-switch-on-1 {
     0% {
-        color: #cccccc;
-        text-shadow: 0 0 18px;
-    }
-    10% {
-        color: #ffffff2b;
-        text-shadow: none;
-    }
-
-    29% {
-        color: #ffffff2b;
-        text-shadow: none;
-    }
-
-    30% {
-        color: #cccccc;
-        text-shadow: 0 0 18px;
-    }
-
-    40% {
         color: #ffffff2b;
         text-shadow: none;
     }
@@ -114,7 +95,7 @@
 
     70% {
         color: #cccccc;
-        text-shadow: 0 0 18px;
+        text-shadow: 0 0 36px #fff, 0 0 12px #fff;
     }
 
     80% {
@@ -129,28 +110,123 @@
 
     to {
         color: #cccccc;
-        text-shadow: 0 0 18px;
+        text-shadow: 0 0 36px #fff, 0 0 12px #fff;
+    }
+}
+@keyframes text-neon-switch-on-2 {
+    0% {
+        color: #cccccc;
+        text-shadow: 0 0 36px #fff, 0 0 12px #fff;
+    }
+    10% {
+        color: #ffffff2b;
+        text-shadow: none;
     }
 
+    29% {
+        color: #ffffff2b;
+        text-shadow: none;
+    }
+
+    30% {
+        color: #cccccc;
+        text-shadow: 0 0 36px #fff, 0 0 12px #fff;
+    }
+
+    40% {
+        color: #ffffff2b;
+        text-shadow: none;
+    }
+
+    69% {
+        color: #ffffff2b;
+        text-shadow: none;
+    }
+
+    70% {
+        color: #cccccc;
+        text-shadow: 0 0 36px #fff, 0 0 12px #fff;
+    }
+
+    80% {
+        color: #ffffff2b;
+        text-shadow: none;
+    }
+
+    99% {
+        color: #ffffff2b;
+        text-shadow: none;
+    }
+
+    to {
+        color: #cccccc;
+        text-shadow: 0 0 36px #fff, 0 0 12px #fff;
+    }
+}
+@keyframes text-neon-switch-on-3 {
+    0% {
+        color: #cccccc;
+        text-shadow: 0 0 36px #fff, 0 0 12px #fff;
+    }
+    10% {
+        color: #ffffff2b;
+        text-shadow: none;
+    }
+
+    29% {
+        color: #ffffff2b;
+        text-shadow: none;
+    }
+
+    30% {
+        color: #cccccc;
+        text-shadow: 0 0 36px #fff, 0 0 12px #fff;
+    }
+
+    40% {
+        color: #ffffff2b;
+        text-shadow: none;
+    }
+
+    99% {
+        color: #ffffff2b;
+        text-shadow: none;
+    }
+
+    to {
+        color: #cccccc;
+        text-shadow: 0 0 36px #fff, 0 0 12px #fff;
+    }
 }
 
 
 
-.product-related-catalog__first-header.--dephased {
+.product-related-catalog__first-header.--dephased .word.word--1,
+.product-related-catalog__first-header.--dephased .word.word--2,
+.product-related-catalog__first-header.--dephased .word.word--3 {
     color: #ffffff2b;
     text-shadow: none;
     animation-name: none;
 }
 
-.product-related-catalog__first-header {
+.product-related-catalog__first-header .word.word--1,
+.product-related-catalog__first-header .word.word--2,
+.product-related-catalog__first-header .word.word--3 {
     /* color: #cccccc;
     text-shadow: 0 0 12px; */
-    --qwe: 0;
-    animation-name: text-neon-ripple, text-neon-ripple-off, text-neon-switch-on, text-neon-switch-fade-to-normal;
     animation-composition: replace, add, replace, replace;
-    animation-duration: 0.05s, 5s, 1s, 10s;
-    animation-delay: 1.5s, 0s, 0.5s, 1.5s;
+    animation-duration: 0.05s, 3s, 0.5s, 10s;
+    animation-delay: 1.0s, 1.0s, 0.5s, 1.0s;
     animation-fill-mode: forwards, forwards, forwards, forwards;
     animation-iteration-count: infinite, 1, 1, 1;
     
+}
+.product-related-catalog__first-header .word.word--1 {
+    animation-name: text-neon-ripple, text-neon-ripple-off, text-neon-switch-on-1, text-neon-switch-fade-to-normal;
+}
+.product-related-catalog__first-header .word.word--2 {
+    animation-name: text-neon-ripple, text-neon-ripple-off, text-neon-switch-on-2, text-neon-switch-fade-to-normal;
+}
+.product-related-catalog__first-header .word.word--3 {
+    animation-name: text-neon-ripple, text-neon-ripple-off, text-neon-switch-on-3, text-neon-switch-fade-to-normal;
 }
