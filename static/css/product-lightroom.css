@@ -30,7 +30,8 @@
     -webkit-mask-size: 256px 256px;
 }    
 .product-lightroom__background-layer.product-lightroom__background-layer--three {
-    box-shadow: inset 0 0 16px -6px black;
+    box-shadow: inset 0 0 48px 0 #ffffff10, 0 -6px 32px -16px #000000c0;
+    z-index: 1;
 }
 .product-lightroom__content {
     position: relative;

@@ -1,0 +1,156 @@
+.product-related-catalog {
+    padding: 32px;
+    background: linear-gradient(#00553580, #55003f80), linear-gradient(#55003f30, #5730b230, #8531b730, #da620030, #af390030);
+    background-attachment: scroll, fixed;
+    color: #ccc;
+    background-color: #680225;
+    box-shadow: inset 0 128px 64px -64px #ff00ff0f;
+    transition: background-color 5s;
+    position: relative;
+}
+
+.product-related-catalog__first-header {
+    color: #ffffff2b;
+    mix-blend-mode: color-dodge;
+}
+
+.product-related-catalog__content {
+    position: relative;
+}
+
+.product-related-catalog__col,
+.product-related-catalog__row {
+    padding: 16px 0;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.product-related-catalog__row {
+    flex-direction: row;
+}
+
+.product-related-catalog__col {
+    flex-direction: column;
+}
+
+.product-related-catalog__row.product-related-catalog__row--unpad {
+    margin: 0 -32px;
+}
+
+.product-related-catalog__title {
+    padding: 16px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* phasing */
+
+
+@keyframes text-neon-ripple {
+    from {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes text-neon-ripple-off {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes text-neon-switch-fade-to-normal {
+    from {
+        color: #cccccc;
+        text-shadow: 0 0 18px;
+    }
+    to {
+        color: #cccccc;
+        text-shadow: 0 0 18px transparent;
+    }
+
+}
+
+@keyframes text-neon-switch-on {
+    0% {
+        color: #cccccc;
+        text-shadow: 0 0 18px;
+    }
+    10% {
+        color: #ffffff2b;
+        text-shadow: none;
+    }
+
+    29% {
+        color: #ffffff2b;
+        text-shadow: none;
+    }
+
+    30% {
+        color: #cccccc;
+        text-shadow: 0 0 18px;
+    }
+
+    40% {
+        color: #ffffff2b;
+        text-shadow: none;
+    }
+
+    69% {
+        color: #ffffff2b;
+        text-shadow: none;
+    }
+
+    70% {
+        color: #cccccc;
+        text-shadow: 0 0 18px;
+    }
+
+    80% {
+        color: #ffffff2b;
+        text-shadow: none;
+    }
+
+    99% {
+        color: #ffffff2b;
+        text-shadow: none;
+    }
+
+    to {
+        color: #cccccc;
+        text-shadow: 0 0 18px;
+    }
+
+}
+
+
+
+.product-related-catalog__first-header.--dephased {
+    color: #ffffff2b;
+    text-shadow: none;
+    animation-name: none;
+}
+
+.product-related-catalog__first-header {
+    /* color: #cccccc;
+    text-shadow: 0 0 12px; */
+    --qwe: 0;
+    animation-name: text-neon-ripple, text-neon-ripple-off, text-neon-switch-on, text-neon-switch-fade-to-normal;
+    animation-composition: replace, add, replace, replace;
+    animation-duration: 0.05s, 5s, 1s, 10s;
+    animation-delay: 1.5s, 0s, 0.5s, 1.5s;
+    animation-fill-mode: forwards, forwards, forwards, forwards;
+    animation-iteration-count: infinite, 1, 1, 1;
+    
+}
